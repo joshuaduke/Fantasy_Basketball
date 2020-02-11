@@ -1,0 +1,18 @@
+<%- include ("partials/header") %>
+
+
+<h1>Scores</h1>
+<!-- ["events"][0]["competitions"][0]["competitors"][0]["score"] -->
+
+<!-- home team scores -->
+<main>
+  <div>
+
+    <% score["events"].forEach(element => { %>
+      <li> <%= element["competitions"][0]["competitors"][0]["score"] %> </li>
+    <% }); %>
+
+  </div>
+</main>
+
+<%- include ("partials/footer") %>
