@@ -4,33 +4,38 @@
 <h1>Scores</h1>
 <!-- ["events"][0]["competitions"][0]["competitors"][0]["score"] -->
 
-<!-- home team scores -->
+
 
 <main>
   <div>
-
+    <h2>DATE</h2>
     <% score["events"].forEach(element => { %>
       <ul>
-        <li> <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>" alt="">  </li>
-        <li> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
-        <li> <%= element["competitions"][0]["competitors"][0]["score"] %> </li>
+        <!-- home team scores -->
+        <div>
+          <li> <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>" alt=""></li>
+          <li> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
+        </div>
 
-        <li> <img src="<%= element["competitions"][0]["competitors"][1]["team"]["logo"] %>" alt="">  </li>
-        <li> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
-        <li> <%= element["competitions"][0]["competitors"][1]["score"] %> </li>
+        <div class="flex_Container">
+          <li class="score"> <p> <%= element["competitions"][0]["competitors"][0]["score"] %> </p> </li>
+        </div>
+
+        <!-- Away team scores -->
+        <div class="flex_Container">
+          <li class="score"> <p> <%= element["competitions"][0]["competitors"][1]["score"] %> </p> </li>
+        </div>
+
+        <div>
+          <li> <img src="<%= element["competitions"][0]["competitors"][1]["team"]["logo"] %>" alt=""></li>
+          <li> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
+        </div>
+        
       </ul>  
+      <hr>
     <% }); %>
 
   </div>
-
-  <!-- <div>
-
-    <% score["events"].forEach(element => { %>
-      <li> <%= element["competitions"][0]["competitors"][1]["team"]["name"] %> </li>
-      <li> <%= element["competitions"][0]["competitors"][1]["score"] %> </li>
-    <% }); %>
-
-  </div> -->
 </main>
 
 <%- include ("partials/footer") %>

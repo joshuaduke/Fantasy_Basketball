@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -8,13 +10,42 @@ img {
   height: 50px;
 }
 
+h2 {
+  color: #fff;
+}
+
 body {
   background-color: steelblue;
 }
 
 main {
-  width: 50%;
-  height: 80vh;
+  width: 30%;
+  height: auto;
   margin: 0 auto;
+  text-align: center;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+main ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin: 20px 0;
+  color: #fff;
+}
+
+main hr {
+  opacity: 0.3;
+}
+
+main p {
+  font-size: 2em;
 }
 /*# sourceMappingURL=styles.css.map */
