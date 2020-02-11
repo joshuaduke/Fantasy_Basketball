@@ -5,14 +5,20 @@
 <!-- ["events"][0]["competitions"][0]["competitors"][0]["score"] -->
 
 <!-- home team scores -->
+
 <main>
   <div>
 
     <% score["events"].forEach(element => { %>
-      <li> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
-      <li> <%= element["competitions"][0]["competitors"][0]["score"] %> </li>
-      <li> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
-      <li> <%= element["competitions"][0]["competitors"][1]["score"] %> </li>
+      <ul>
+        <li> <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>" alt="">  </li>
+        <li> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
+        <li> <%= element["competitions"][0]["competitors"][0]["score"] %> </li>
+
+        <li> <img src="<%= element["competitions"][0]["competitors"][1]["team"]["logo"] %>" alt="">  </li>
+        <li> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
+        <li> <%= element["competitions"][0]["competitors"][1]["score"] %> </li>
+      </ul>  
     <% }); %>
 
   </div>
