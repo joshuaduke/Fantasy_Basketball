@@ -9,10 +9,22 @@
   <div>
 
     <% score["events"].forEach(element => { %>
+      <li> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
       <li> <%= element["competitions"][0]["competitors"][0]["score"] %> </li>
+      <li> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
+      <li> <%= element["competitions"][0]["competitors"][1]["score"] %> </li>
     <% }); %>
 
   </div>
+
+  <!-- <div>
+
+    <% score["events"].forEach(element => { %>
+      <li> <%= element["competitions"][0]["competitors"][1]["team"]["name"] %> </li>
+      <li> <%= element["competitions"][0]["competitors"][1]["score"] %> </li>
+    <% }); %>
+
+  </div> -->
 </main>
 
 <%- include ("partials/footer") %>
