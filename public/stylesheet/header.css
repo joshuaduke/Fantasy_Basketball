@@ -1,0 +1,45 @@
+/* DARK COLORS */
+nav {
+  width: 100%;
+  height: auto;
+  background-color: #3282B8;
+  padding: 20px;
+}
+
+nav a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: #BBE2FA;
+}
+
+nav #container {
+  width: 90%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  letter-spacing: 1.2px;
+  font-size: 1.3em;
+}
+
+nav ul:nth-child(1) li {
+  float: left;
+}
+
+nav ul:nth-child(2) li {
+  float: right;
+  margin: 0 20px;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,6 +1,6 @@
 let express = require("express");
 let app = express();
-let request = require('request').defaults({ encoding: null });;
+let request = require('request');
 
 // request('http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28', (err, res, body)=>{
 //   if (!err && res.statusCode == 200){
@@ -12,11 +12,10 @@ let request = require('request').defaults({ encoding: null });;
 // })
 
 app.set("view engine", "ejs"); // for ejs files
-app.use(express.static(__dirname + "/public")); // for css
+app.use(express.static(__dirname + "/public")); // to read css
 
 app.get("/index", (req, res)=>{
   res.render("index");
-  // res.render("");
 }); 
 
 

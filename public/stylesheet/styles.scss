@@ -1,10 +1,6 @@
-$headers: Helvetica ;
+@import 'header';
+@import 'variables';
 
-/* DARK COLORS */
-$bkg: #000;
-$secondaryBkg: #1B262B ;
-$something:#3282B8;
-$text:#BBE2FA;
 
 /* Func Font Size */
 
@@ -17,6 +13,10 @@ $text:#BBE2FA;
   padding:0;
   box-sizing: border-box;
   line-height: 1.3em;
+}
+
+a{
+  text-decoration: none;
 }
 
 body{
