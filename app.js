@@ -14,8 +14,8 @@ let request = require('request').defaults({ encoding: null });;
 app.set("view engine", "ejs"); // for ejs files
 app.use(express.static(__dirname + "/public")); // for css
 
-app.get("/", (req, res)=>{
-  res.send("This is the homepage");
+app.get("/index", (req, res)=>{
+  res.render("index");
   // res.render("");
 }); 
 
