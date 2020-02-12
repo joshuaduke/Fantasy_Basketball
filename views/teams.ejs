@@ -1,11 +1,17 @@
 <%- include ("partials/header") %>
-<% let i = 0  %>
-<div>
+<% let i = 1  %>
 
+<% let teams_list = []; %>
+
+<div>
+  <!-- Add every team into an array as an object?? manually enter the 5 that aren't generated with the api -->
   <% team["sports"][0]["leagues"][0]["teams"] .forEach(element => { %>
     <p> <%= element["team"]["displayName"] %> </p>
+        <% teams_list.push(element["team"]["displayName"]); %>
+
     <%= i++ %>
-  <% }); %>   
+  <% }); %>  
+  <% console.log(teams_list); %> 
 </div>
 
 <%- include ("partials/footer") %>

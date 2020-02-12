@@ -49,24 +49,22 @@ app.get("/scores", (req, res)=>{
 
 app.get("/teams", (req, res)=>{
 
-  // request('http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams', (err, response, body)=>{
-  //   if (!err && response.statusCode == 200){
-  //     let team = JSON.parse(body)
-
-  //     res.render("teams", {team: team})
-  //   }
-  // });
-
-  let url = "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams"
-
-  request(url, (err, response, body)=>{
+  request('http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams', (err, response, body)=>{
     if (!err && response.statusCode == 200){
       let team = JSON.parse(body)
 
-      // res.render("teams_test", {team: team})
-      res.send(team);
+      res.render("teams", {team: team})
     }
   });
+
+  // request(url, (err, response, body)=>{
+  //   if (!err && response.statusCode == 200){
+  //     let team = JSON.parse(body)
+
+  //     // res.render("teams_test", {team: team})
+  //     res.send(team);
+  //   }
+  // });
 
 
 
