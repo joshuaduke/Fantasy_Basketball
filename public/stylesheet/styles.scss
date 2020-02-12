@@ -1,4 +1,4 @@
-
+$headers: Helvetica ;
 
 *{
   margin:0;
@@ -6,9 +6,17 @@
   box-sizing: border-box;
 }
 
+h1, h2{
+  font-family:$headers;
+}
+
 img{
   width:50px;
   height:50px;
+}
+
+h1{
+  text-align: center;
 }
 
 h2{
@@ -30,7 +38,7 @@ main{
 
   ul{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     align-items: center;
     list-style-type: none;
     margin:20px 0;
@@ -49,12 +57,15 @@ main{
     font-size:.6em;
   }
 
+  .detail{
+    font-size:.4em;
+  }
+
   .abb{
     font-size:.6em;
     padding-top:8px;
     letter-spacing:2px;
   }
-
 }
 
  

@@ -4,8 +4,6 @@
 <h1>Scores</h1>
 <!-- ["events"][0]["competitions"][0]["competitors"][0]["score"] -->
 
-
-
 <main>
   <div>
     <h2> <%= score["day"]["date"] %>  </h2>
@@ -23,10 +21,9 @@
 
         <!-- Clock -->
         <div>
-          <li class="period"> <p> <%= element["status"]["displayClock"] %> </p> </li>
+          <li class="detail"> <p> <%= element["status"]["type"]["shortDetail"] %> </p> </li>
           <li class="period"> <p> <%= element["status"]["period"] %> </p> </li>
         </div>
-
 
         <!-- Away team scores -->
         <div class="flex_Container">

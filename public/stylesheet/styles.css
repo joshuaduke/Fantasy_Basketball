@@ -5,9 +5,17 @@
           box-sizing: border-box;
 }
 
+h1, h2 {
+  font-family: Helvetica;
+}
+
 img {
   width: 50px;
   height: 50px;
+}
+
+h1 {
+  text-align: center;
 }
 
 h2 {
@@ -31,8 +39,8 @@ main {
 main ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 2fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -51,6 +59,10 @@ main p {
 
 main .period {
   font-size: .6em;
+}
+
+main .detail {
+  font-size: .4em;
 }
 
 main .abb {
