@@ -1,13 +1,28 @@
 $headers: Helvetica ;
 
+/* DARK COLORS */
+$bkg: #000;
+$secondaryBkg: #1B262B ;
+$something:#3282B8;
+$text:#BBE2FA;
+
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
+  line-height: 1.3em;
+}
+
+body{
+  background-color:$bkg;
 }
 
 h1, h2{
   font-family:$headers;
+}
+
+h1, h2, li, p{
+  color:$text;
 }
 
 img{
@@ -23,16 +38,12 @@ h2{
   color:#fff;
 }
 
-body{
-  background-color:steelblue;
-}
-
 main{
   width:30%;
   height:auto;
   margin:0 auto;
   text-align: center;
-  background-color:#000;
+  background-color:$secondaryBkg;
   padding:10px;
   border-radius: 5px;
 

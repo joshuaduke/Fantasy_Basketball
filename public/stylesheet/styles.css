@@ -1,12 +1,22 @@
+/* DARK COLORS */
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  line-height: 1.3em;
+}
+
+body {
+  background-color: #000;
 }
 
 h1, h2 {
   font-family: Helvetica;
+}
+
+h1, h2, li, p {
+  color: #BBE2FA;
 }
 
 img {
@@ -22,16 +32,12 @@ h2 {
   color: #fff;
 }
 
-body {
-  background-color: steelblue;
-}
-
 main {
   width: 30%;
   height: auto;
   margin: 0 auto;
   text-align: center;
-  background-color: #000;
+  background-color: #1B262B;
   padding: 10px;
   border-radius: 5px;
 }

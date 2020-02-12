@@ -7,3 +7,6 @@ All Teams: http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams
 Specific Team: http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/:team
 
 Player: http://site.api.espn.com/apis/common/v3/sports/basketball/nba/athletes/1966 // lebron James
+
+
+http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard eventsID :401161444 // feb 11 2020

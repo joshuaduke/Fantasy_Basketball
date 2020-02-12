@@ -75,3 +75,8 @@ app.get("/scores", (req, res)=>{
 app.listen(3000, process.env.PORT, ()=>{
   console.log("This server has started");
 });
+
+
+
+// Add a database in order to keep track of the games during the week
+// only allow 7 days 

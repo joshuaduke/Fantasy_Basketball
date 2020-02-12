@@ -1,12 +1,32 @@
 <%- include ("partials/header") %>
 
+<% function formatDate(date) { 
+  var monthNames = [
+    "Jan", "Feb", "Mar",
+    "Apr", "May", "June", "July",
+    "Aug", "Sep", "Oct",
+    "Nov", "Dec"
+  ];
+
+  var day = date.getDate();
+  var monthIndex = date.getMonth();
+  var year = date.getFullYear();
+
+  return monthNames[monthIndex] + ' ' + day + ' ' + year;
+} 
+
+console.log(formatDate(new Date())); %>
 
 <h1>Scores</h1>
 <!-- ["events"][0]["competitions"][0]["competitors"][0]["score"] -->
 
 <main>
   <div>
-    <h2> <%= score["day"]["date"] %>  </h2>
+    <% let date =  Date.parse(score["day"]["date"]) %>
+    <!-- <h2> <%= score["day"]["date"] %>  </h2> -->
+    <h2> <%= date %>  </h2>
+    <h2> <%= formatDate(new Date()) %>  </h2>
+    <h3> <%= score["events"][0]["id"] %> </h3>
     <% score["events"].forEach(element => { %>
       <ul>
         <!-- home team scores -->
