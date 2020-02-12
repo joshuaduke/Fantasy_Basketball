@@ -1,0 +1,11 @@
+<%- include ("partials/header") %>
+<% let i = 0  %>
+<div>
+
+  <% team["sports"][0]["leagues"][0]["teams"] .forEach(element => { %>
+    <p> <%= element["team"]["displayName"] %> </p>
+    <%= i++ %>
+  <% }); %>   
+</div>
+
+<%- include ("partials/footer") %>
