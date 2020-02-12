@@ -6,6 +6,12 @@ $secondaryBkg: #1B262B ;
 $something:#3282B8;
 $text:#BBE2FA;
 
+/* Func Font Size */
+
+// @function fontSize($val){
+//   @return $val;
+// }
+
 *{
   margin:0;
   padding:0;
@@ -39,7 +45,7 @@ h2{
 }
 
 main{
-  width:30%;
+  width:410px;
   height:auto;
   margin:0 auto;
   text-align: center;
