@@ -27,11 +27,14 @@ console.log(formatDate(new Date())); %>
     <h2> <%= date %>  </h2>
     <h2> <%= formatDate(new Date()) %>  </h2>
     <h3> <%= score["events"][0]["id"] %> </h3>
+
     <% score["events"].forEach(element => { %>
       <ul>
         <!-- home team scores -->
         <div>
+          <!-- img -->
           <li> <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>" alt=""></li>
+
           <li class="abb"> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
         </div>
 
@@ -51,12 +54,14 @@ console.log(formatDate(new Date())); %>
         </div>
 
         <div>
+          <!-- img -->
           <li> <img src="<%= element["competitions"][0]["competitors"][1]["team"]["logo"] %>" alt=""></li>
           <li class="abb"> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
         </div>
         
       </ul>  
       <hr>
+      
     <% }); %>
 
   </div>
