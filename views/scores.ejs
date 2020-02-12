@@ -8,18 +8,25 @@
 
 <main>
   <div>
-    <h2>DATE</h2>
+    <h2> <%= score["day"]["date"] %>  </h2>
     <% score["events"].forEach(element => { %>
       <ul>
         <!-- home team scores -->
         <div>
           <li> <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>" alt=""></li>
-          <li> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
+          <li class="abb"> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
         </div>
 
         <div class="flex_Container">
           <li class="score"> <p> <%= element["competitions"][0]["competitors"][0]["score"] %> </p> </li>
         </div>
+
+        <!-- Clock -->
+        <div>
+          <li class="period"> <p> <%= element["status"]["displayClock"] %> </p> </li>
+          <li class="period"> <p> <%= element["status"]["period"] %> </p> </li>
+        </div>
+
 
         <!-- Away team scores -->
         <div class="flex_Container">
@@ -28,7 +35,7 @@
 
         <div>
           <li> <img src="<%= element["competitions"][0]["competitors"][1]["team"]["logo"] %>" alt=""></li>
-          <li> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
+          <li class="abb"> <%= element["competitions"][0]["competitors"][1]["team"]["abbreviation"] %> </li>
         </div>
         
       </ul>  

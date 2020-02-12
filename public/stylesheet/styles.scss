@@ -1,3 +1,5 @@
+
+
 *{
   margin:0;
   padding:0;
@@ -28,7 +30,7 @@ main{
 
   ul{
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     list-style-type: none;
     margin:20px 0;
@@ -41,6 +43,16 @@ main{
 
   p{
     font-size:2em;
+  }
+
+  .period{
+    font-size:.6em;
+  }
+
+  .abb{
+    font-size:.6em;
+    padding-top:8px;
+    letter-spacing:2px;
   }
 
 }
