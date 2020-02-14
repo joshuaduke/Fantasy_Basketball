@@ -3,19 +3,6 @@
 
 <% let teams_list = []; %>
 
-<div>
-  <!-- Add every team into an array as an object?? manually enter the 5 that aren't generated with the api -->
-  <% team["sports"][0]["leagues"][0]["teams"] .forEach(element => { %>
-    <p> <%= element["team"]["displayName"] %> </p>
-        <% teams_list.push(element["team"]["displayName"]); %>
-
-    <%= i++ %>
-  <% }); %>  
-  <% console.log(teams_list); %> 
-</div>
-
-<%- include ("partials/footer") %>
-
 <!--  Teams Missing
 
   Charlotte Hornets
@@ -26,14 +13,49 @@
 
 -->
 
+<% let tor = {  
+  name: "Toronto Raptors",
+  abb: "TOR",
+  color: "CE0F41",
+  alternateColor: "061922",
+  logo: "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+
+}; %>
+
+<% teams_list.push(tor["name"]); %>
+
+<div>
+  <!-- Add every team into an array as an object?? manually enter the 5 that aren't generated with the api -->
+  <% team["sports"][0]["leagues"][0]["teams"].forEach(element => { %>
+    <!-- <p> <%= element["team"]["displayName"] %> </p> -->
+        <% teams_list.push(element["team"]["displayName"]); %>
+
+
+    <%= i++ %>
+  <% }); %>  
+
+  <!-- <% teams_list.forEach(item => { %>
+    <p> <%= teams_list[i] %> </p>
+  <% }); %> -->
+
+  <% for(let i = 0; i < teams_list.length; i++){ %>
+    <p> <%= teams_list[i] %> </p>
+  <% } %>
+
+
+  <% console.log(teams_list); %> 
+
+
+</div>
+
+<% console.log("This is the team list" + typeof teams_list); %>
+<%- include ("partials/footer") %>
+
+
+
+
+
+
+
 <!-- object for each team -->
 
-<% let tor = { 
-      name = "Toronto Raptors",
-      abb = "TOR",
-      color = "CE0F41",
-      alternateColor = "061922",
-      logo = "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
-      
-
-} %>

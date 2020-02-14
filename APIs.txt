@@ -14,3 +14,13 @@ http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard/eventsID 
 http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?limit=1000&dates=20200211-20200215&1577413600 // scores between 2 dates 20200211  2020 02 11 and 20200215 2020 02 15
 
 http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/roster // Raptors roster
+
+
+<% let tor = {  
+  name: "Toronto Raptors",
+  abb: "TOR",
+  color: "CE0F41",
+  alternateColor: "061922",
+  logo: "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+
+}; %>

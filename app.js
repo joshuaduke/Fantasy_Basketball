@@ -1,6 +1,7 @@
 let express = require("express");
 let app = express();
 let request = require('request');
+let locus = require('locus');
 
 app.set("view engine", "ejs"); // for ejs files
 app.use(express.static(__dirname + "/public")); // to read css
@@ -48,25 +49,15 @@ app.get("/scores", (req, res)=>{
 });
 
 app.get("/teams", (req, res)=>{
-
+  // eval(locus);
   request('http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams', (err, response, body)=>{
     if (!err && response.statusCode == 200){
       let team = JSON.parse(body)
 
-      res.render("teams", {team: team})
+      res.render("teams", {team: team});
     }
+
   });
-
-  // request(url, (err, response, body)=>{
-  //   if (!err && response.statusCode == 200){
-  //     let team = JSON.parse(body)
-
-  //     // res.render("teams_test", {team: team})
-  //     res.send(team);
-  //   }
-  // });
-
-
 
 });
 
