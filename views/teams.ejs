@@ -2,16 +2,13 @@
 <% let i = 1  %>
 
 <% let teams_list = []; %>
+<% let teams_obj = []; %>
 
-<!--  Teams Missing
 
-  Charlotte Hornets
-  Memphis Grizzlies
-  Toronto Raptors
-  Utah Jazz
-  Washington Wizards
+<!--  ----------  Teams Missing  ---------- -->
+<!--   Charlotte Hornets -->
 
--->
+<!--   Toronto Raptors  id 28 -->
 
 <% let tor = {  
   name: "Toronto Raptors",
@@ -22,15 +19,62 @@
 
 }; %>
 
-<% teams_list.push(tor["name"]); %>
+<!--   Utah Jazz -->
+
+<% let utah = {  
+  name: "Utah Jazz",
+  abb: "UTAH",
+  color: "06143F",
+  alternateColor: "f9a01b",
+  logo: "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+
+}; %>
+
+<!--   Washington Wizards -->
+
+<% let wsh = {  
+  name: "Washington Wizards",
+  abb: "WSH",
+  color: "0E3764",
+  alternateColor: "e31837",
+  logo: "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png",
+
+}; %>
+
+<!--   Memphis Grizzlies -->
+
+<% let mem = {  
+  name: "Memphis Grizzlies",
+  abb: "MEM",
+  color: "5D76A8",
+  alternateColor: "7399c6",
+  logo: "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
+
+}; %>
+
+<!-- Charlotte Hornets -->
+
+<% let cha = {  
+  name: "Charlotte Hornets",
+  abb: "CHA",
+  color: "1D1060",
+  alternateColor: "008ca8",
+  logo: "https://a.espncdn.com/i/teamlogos/nba/500/cha.png",
+
+}; %>
+
+
+<% teams_list.push(tor["name"], utah["name"], wsh["name"], mem["name"], cha["name"]); %>
+<% teams_obj.push(tor) %>
+<% console.log("here is the object " + teams_obj[0]["name"]) %>
 
 <div>
   <!-- Add every team into an array as an object?? manually enter the 5 that aren't generated with the api -->
+
+  <!--  Add all of the available team names into the teams_list array -->
   <% team["sports"][0]["leagues"][0]["teams"].forEach(element => { %>
-    <!-- <p> <%= element["team"]["displayName"] %> </p> -->
+    <p> <%= element["team"]["displayName"] %> </p>
         <% teams_list.push(element["team"]["displayName"]); %>
-
-
     <%= i++ %>
   <% }); %>  
 
@@ -51,11 +95,4 @@
 <% console.log("This is the team list" + typeof teams_list); %>
 <%- include ("partials/footer") %>
 
-
-
-
-
-
-
-<!-- object for each team -->
 
