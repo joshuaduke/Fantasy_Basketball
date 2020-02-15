@@ -54,7 +54,7 @@ app.get("/teams", (req, res)=>{
     if (!err && response.statusCode == 200){
       let team = JSON.parse(body)
 
-      res.render("teams", {team: team});
+      res.render("teams_test", {team: team});
     }
 
   });

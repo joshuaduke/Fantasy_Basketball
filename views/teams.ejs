@@ -1,5 +1,5 @@
 <%- include ("partials/header") %>
-
+<% let i = 0 %>
 <% let teams_list = []; %>
 <% let teams_obj = []; %>
 
@@ -63,7 +63,12 @@
 }; %>
 
 
-<% teams_list.push(tor["name"], utah["name"], wsh["name"], mem["name"], cha["name"]); %>
+<% teams_list.push(
+    tor["name"],  
+    utah["name"], 
+    wsh["name"], 
+    mem["name"], 
+    cha["name"]); %>
 
 
 <% teams_obj.push(tor) %>
@@ -77,9 +82,12 @@
     
     <p> <%= element["team"]["displayName"] %> </p>
         <% teams_list.push(element["team"]["displayName"]); %>
+        
     <img src=" <%= element["team"]["logos"][0]["href"];  %> " >  
 
+
   <% }); %>  
+  <% console.log(teams_list) %>
 
   <% teams_list.forEach(item => { %>
     <p> <%= teams_list[i] %> </p>
