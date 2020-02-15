@@ -1,5 +1,5 @@
-@import 'header';
-@import 'variables';
+@import '_header';
+@import '_variables';
 
 
 /* Func Font Size */
@@ -28,7 +28,8 @@ h1, h2{
 }
 
 h1, h2, li, p{
-  color:$text;
+  // color:$text;
+  color:#000;
 }
 
 img{
@@ -85,4 +86,19 @@ main{
   }
 }
 
- 
+ // Teams page
+
+ .teamContainer{
+   width:100%;
+   background-color:yellow;
+   margin:10px;
+   display:grid;
+   grid-template-columns: repeat(6, 1fr);
+ }
+
+ .teamBox{
+  width:100px;
+  width:100px;
+  background-color:steelblue;
+  margin:20px;
+ }

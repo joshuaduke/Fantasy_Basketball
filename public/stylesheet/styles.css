@@ -62,7 +62,7 @@ h1, h2 {
 }
 
 h1, h2, li, p {
-  color: #BBE2FA;
+  color: #000;
 }
 
 img {
@@ -121,5 +121,22 @@ main .abb {
   font-size: .6em;
   padding-top: 8px;
   letter-spacing: 2px;
+}
+
+.teamContainer {
+  width: 100%;
+  background-color: yellow;
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.teamBox {
+  width: 100px;
+  width: 100px;
+  background-color: steelblue;
+  margin: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
