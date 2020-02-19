@@ -29,11 +29,19 @@ console.log(formatDate(new Date())); %>
     <h3> <%= score["events"][0]["id"] %> </h3>
 
     <% score["events"].forEach(element => { %>
+      
       <ul>
         <!-- home team scores -->
         <div>
           <!-- img -->
-          <li> <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>" alt=""></li>
+          <!-- <li> <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>" alt=""></li> -->
+
+          <!-- when link is clicked team id appears on page-->
+          <li> 
+            <a href="teams/<%= element["competitions"][0]["competitors"][0]["team"]["id"] %>" > 
+              <img src="<%= element["competitions"][0]["competitors"][0]["team"]["logo"] %>">
+            </a> 
+          </li>
 
           <li class="abb"> <%= element["competitions"][0]["competitors"][0]["team"]["abbreviation"] %> </li>
         </div>

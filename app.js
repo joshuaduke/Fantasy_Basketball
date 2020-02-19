@@ -6,6 +6,13 @@ let locus = require('locus');
 app.set("view engine", "ejs"); // for ejs files
 app.use(express.static(__dirname + "/public")); // to read css
 
+
+
+app.get("/", (req, res)=>{
+  res.redirect("scores");
+})
+
+//INDEX ROUTE
 app.get("/index", (req, res)=>{
   res.render("index");
 }); 
@@ -59,6 +66,11 @@ app.get("/teams", (req, res)=>{
 
   });
 
+});
+
+//SHOW
+app.get("/teams/:id", (req, res)=>{
+  res.send(req.params.id);
 });
 
 app.listen(3000, process.env.PORT, ()=>{
